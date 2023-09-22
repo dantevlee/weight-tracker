@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <div class="formWrapper">
+      <form class="formEl">
+        <label for="date">Date:</label>
+        <input class="date" type="date" />
+        <label for="weight">Weight:</label>
+        <input placeholder="enter weight.." class="weight" type="number" />
+        <label for="units">Units of Measurement:</label>
+        <select class="measurement">
+          <option value="">select a Unit..</option>
+          <option value="lbs">lbs</option>
+          <option value="kg">kg</option>
+        </select>
+        <input type="button" class="submit-button" value="Submit" />
+        <div class="message"></div>
+      </form>
+    </div>
+    <div class="table-container">
+      <table style="display: none">
+        <thead>
+          <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

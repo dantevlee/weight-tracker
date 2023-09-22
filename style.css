@@ -1,0 +1,68 @@
+body{
+  background-color: steelblue;
+  align-items: center;
+}
+
+label{
+  color: whitesmoke;
+  font-weight: bolder;
+  font-size: larger;
+  font-family: "Gill Sans", sans-serif;
+}
+
+.formEl{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 75px;
+}
+
+.measurement{
+  border: 1px solid #ccc; 
+  padding: 5px 5px; 
+  border-radius: 36px;
+  margin: 0 0 15px 0;
+  min-width: 125px;
+  background-color: lightgreen;
+}
+
+.date{
+  border: 1px solid #ccc; 
+  padding: 5px 5px; 
+  border-radius: 36px;
+  margin: 0 0 15px 0;
+  background-color: lightgreen;
+}
+
+.weight{
+  border: 1px solid #ccc; 
+  padding: 5px 5px; 
+  border-radius: 36px;
+  margin: 0 0 15px 0;
+  background-color: lightgreen;
+}
+
+.submit-button{
+  border-radius: 40px;
+  padding: 5px 20px; 
+  background-color: lightyellow;
+  cursor: pointer;
+  border-color: orange;
+}
+
+.submit-button:hover{
+  background-color: lightsteelblue;
+}
+
+p , .submit-button{
+  color: blue;
+  font-weight: bold;
+}
+
+.message{
+  font-weight: bold;
+  color: red;
+  background-color: whitesmoke;
+  display: inline-block;
+  margin-top: 20px;
+}
