@@ -60,14 +60,15 @@ function submitEntry(newWeight) {
   weightForm.reset();
 }
 
-function deleteEntry(deleteButton, id) {
-  deleteButton.parentElement.remove();
-  for (let i = 0; i < weightArray.length; i++) {
-    if (weightArray[i].id === id) {
-      weightArray.splice(i, 1);
-      localStorage.setItem('weightArray', JSON.stringify(weightArray));
+function deleteEntry(row, id) {
+  row.remove();
+  weightArray.forEach((weightEntry, index) => {
+    if (weightEntry.id === id) {
+      weightArray.splice(index, 1);
+      pushToLocalStorage();
+      return;
     }
-  }
+  });
   if (weightArray.length === 0) {
     table.style.display = 'none';
   }
