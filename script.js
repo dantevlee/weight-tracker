@@ -53,7 +53,7 @@ function submitEntry(newWeight) {
   row.appendChild(deleteButton);
 
   deleteButton.addEventListener('click', () =>{
-    deleteEntry(deleteButton, newWeight.id);
+    deleteEntry(row, newWeight.id);
   })
 
   table.style.display = 'table';
