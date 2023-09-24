@@ -16,12 +16,14 @@ weightForm.addEventListener('submit', (event) => {
   const date = document.getElementById('date');
   const weight = document.getElementById('weight');
   const unit = document.getElementById('unit');
+  const notes = document.getElementById('notes');
 
   const newWeight = {
     id: Math.random(),
     date: date.value,
     weight: weight.value, 
-    unit: unit.value
+    unit: unit.value,
+    notes: notes.value
   }
 
   submitEntry(newWeight);
@@ -46,6 +48,10 @@ function submitEntry(newWeight) {
   const unitEntry = document.createElement('td');
   unitEntry.textContent = newWeight.unit
   row.appendChild(unitEntry);
+
+  const notesEntry = document.createElement('td');
+  notesEntry.textContent = newWeight.notes;
+  row.appendChild(notesEntry);
 
   const deleteButton = document.createElement('button');
   deleteButton.textContent = 'Delete';
@@ -73,6 +79,7 @@ function deleteEntry(row, id) {
     table.style.display = 'none';
   }
 }
+
 
 function pushToLocalStorage(newWeight) {
   localStorage.setItem('weightArray', JSON.stringify(weightArray));
